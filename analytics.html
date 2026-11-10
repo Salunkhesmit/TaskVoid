@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Analytics · TASKVOID</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/components.css" rel="stylesheet">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark"><i class="fa-solid fa-cube"></i></span>
+        <span>TASKVOID<small>focus · plan · ship</small></span>
+      </a>
+      <div class="nav-label">Workspace</div>
+      <a class="nav-link" href="../index.html"><i class="fa-solid fa-grid-2"></i>Overview</a>
+      <a class="nav-link" href="../pages/tasks.html"><i class="fa-solid fa-list-check"></i>Tasks</a>
+      <a class="nav-link" href="../pages/focus.html"><i class="fa-solid fa-hourglass-half"></i>Focus</a>
+      <a class="nav-link" href="../pages/calendar.html"><i class="fa-solid fa-calendar-days"></i>Calendar</a>
+      <a class="nav-link" href="../pages/analytics.html"><i class="fa-solid fa-chart-column"></i>Analytics</a>
+      <div class="sidebar-bottom">
+        <div class="d-flex align-items-center gap-2 mb-1">
+          <i class="fa-solid fa-sparkles"></i>
+          <strong>Make today count</strong>
+        </div>
+        <div class="tiny">Small progress, daily.</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <div class="topbar-left">
+          <button class="icon-button mobile-menu" data-mobile-menu aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div>
+            <div class="eyebrow">Analytics</div>
+            <h1>Progress</h1>
+            <div class="subtitle">A lightweight snapshot.</div>
+          </div>
+        </div>
+        <div class="date-chip"><span data-current-date></span></div>
+      </div>
+
+      <div class="stat-grid fade-in">
+        <div class="stat-card">
+          <div class="stat-top"><span>Total tasks</span><span class="stat-icon"><i class="fa-solid fa-list-check"></i></span></div>
+          <div class="stat-number" data-analytics-total>0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-top"><span>Completed</span><span class="stat-icon"><i class="fa-solid fa-check"></i></span></div>
+          <div class="stat-number" data-analytics-done>0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-top"><span>Pending</span><span class="stat-icon"><i class="fa-solid fa-hourglass"></i></span></div>
+          <div class="stat-number" data-analytics-pending>0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-top"><span>Focus sessions</span><span class="stat-icon"><i class="fa-solid fa-stopwatch"></i></span></div>
+          <div class="stat-number" data-analytics-sessions>0</div>
+        </div>
+      </div>
+
+      <div class="content-grid">
+        <section class="panel fade-in" data-analytics>
+          <div class="panel-title">
+            <div>
+              <h2>Focus activity</h2>
+              <p>Completed sessions — last 7 days</p>
+            </div>
+            <span class="badge-soft">Weekly</span>
+          </div>
+          <div class="chart-wrap">
+            <canvas id="productivityChart" height="120"></canvas>
+          </div>
+        </section>
+
+        <section class="panel fade-in">
+          <div class="panel-title">
+            <div>
+              <h2>Total focus time</h2>
+              <p>Recorded focus blocks</p>
+            </div>
+          </div>
+          <div style="font-family:var(--font-mono);font-size:40px;font-weight:500;letter-spacing:-0.03em;color:var(--text);line-height:1">
+            <span data-analytics-minutes>0</span><span style="font-size:14px;color:var(--text-muted);margin-left:6px;font-weight:400">min</span>
+          </div>
+          <p class="subtitle mt-3" style="font-size:12px">Sessions are stored locally in this browser.</p>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/storage.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="../assets/js/analytics.js"></script>
+</body>
+</html>
