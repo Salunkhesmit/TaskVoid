@@ -1,7 +1,3 @@
-/* ============================================
-   Shared components
-   ============================================ */
-
 .icon-button {
   width: 32px;
   height: 32px;
@@ -58,7 +54,7 @@
 
 .info-box i { color: var(--warning); }
 
-/* Focus orb — subtle, no animation */
+/* Focus orb */
 .focus-orb {
   width: 44px;
   height: 44px;
