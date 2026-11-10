@@ -39,7 +39,3 @@ TaskVoid is currently being refined for deployment. More improvements and enhanc
 ## Developer
 
 Developed by **Smit Salunkhe**
-
----
-
-*TaskVoid — Organize the chaos. Focus on what matters.*
