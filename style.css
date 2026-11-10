@@ -1,7 +1,3 @@
-/* ============================================
-   TASKVOID — Minimal Dark UI
-   ============================================ */
-
 :root {
   --bg: #0a0a0a;
   --surface: #131313;
@@ -49,16 +45,10 @@ strong, b { font-weight: 600; }
 ::-webkit-scrollbar-thumb { background: var(--border-hover); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: #333; }
 
-/* ============================================
-   Layout
-   ============================================ */
-
+/* Layout */
 .app-shell { display: flex; min-height: 100vh; }
 
-/* ============================================
-   Sidebar
-   ============================================ */
-
+/* Sidebar */
 .sidebar {
   width: var(--sidebar-width);
   position: fixed;
@@ -172,9 +162,7 @@ strong, b { font-weight: 600; }
 
 .sidebar-bottom i { color: var(--accent); }
 
-/* ============================================
-   Main
-   ============================================ */
+/* Main */
 
 .main {
   margin-left: var(--sidebar-width);
@@ -184,10 +172,7 @@ strong, b { font-weight: 600; }
   width: calc(100% - var(--sidebar-width));
 }
 
-/* ============================================
-   Topbar
-   ============================================ */
-
+/* Topbar */
 .topbar {
   display: flex;
   align-items: flex-start;
@@ -240,10 +225,7 @@ h1 {
   flex-shrink: 0;
 }
 
-/* ============================================
-   Panels
-   ============================================ */
-
+/* Panels */
 .panel,
 .stat-card {
   background: var(--surface);
@@ -274,10 +256,7 @@ h1 {
   margin: 3px 0 0;
 }
 
-/* ============================================
-   Stats
-   ============================================ */
-
+/* Stats */
 .stat-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -325,10 +304,7 @@ h1 {
   margin-top: 6px;
 }
 
-/* ============================================
-   Content grid
-   ============================================ */
-
+/*Content grid */
 .content-grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
@@ -336,10 +312,7 @@ h1 {
   align-items: start;
 }
 
-/* ============================================
-   Progress
-   ============================================ */
-
+/*Progress */
 .progress-track {
   height: 4px;
   background: var(--border);
@@ -354,10 +327,7 @@ h1 {
   transition: width 300ms ease;
 }
 
-/* ============================================
-   Tasks
-   ============================================ */
-
+/* Tasks */
 .task-row {
   display: flex;
   align-items: center;
@@ -469,10 +439,7 @@ h1 {
   border-color: rgba(74, 222, 128, 0.15);
 }
 
-/* ============================================
-   Buttons
-   ============================================ */
-
+/* Buttons */
 .btn {
   font-family: var(--font-sans);
   font-size: 13px;
@@ -525,10 +492,7 @@ h1 {
   color: var(--text);
 }
 
-/* ============================================
-   Forms
-   ============================================ */
-
+/* Forms */
 .form-control,
 .form-select {
   background: var(--bg);
@@ -563,10 +527,7 @@ h1 {
 .input-group .form-control { border-top-right-radius: 0; border-bottom-right-radius: 0; }
 .input-group .btn { border-top-left-radius: 0; border-bottom-left-radius: 0; }
 
-/* ============================================
-   Empty state
-   ============================================ */
-
+/* Empty state */
 .empty-state {
   text-align: center;
   padding: 40px 16px;
@@ -582,10 +543,7 @@ h1 {
   opacity: 0.5;
 }
 
-/* ============================================
-   Timer
-   ============================================ */
-
+/* Timer */
 .timer-wrap {
   text-align: center;
   padding: 8px 8px 0;
@@ -670,10 +628,7 @@ h1 {
   margin-top: 8px;
 }
 
-/* ============================================
-   Calendar
-   ============================================ */
-
+/* Calendar */
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -731,10 +686,7 @@ h1 {
   vertical-align: middle;
 }
 
-/* ============================================
-   Filter chips
-   ============================================ */
-
+/* Filter chips */
 .filter-row {
   display: inline-flex;
   gap: 2px;
@@ -764,10 +716,7 @@ h1 {
   color: var(--text);
 }
 
-/* ============================================
-   Modal
-   ============================================ */
-
+/* Modal */
 .modal-backdrop.show {
   opacity: 0.7;
   background: #000;
@@ -798,10 +747,7 @@ h1 {
 .btn-close-white { filter: invert(0.6); }
 .btn-close-white:hover { filter: invert(0.9); }
 
-/* ============================================
-   Responsive
-   ============================================ */
-
+/* Responsive */
 @media (max-width: 900px) {
   .content-grid { grid-template-columns: 1fr; }
   .stat-grid { grid-template-columns: repeat(2, 1fr); }
