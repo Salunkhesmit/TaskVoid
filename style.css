@@ -616,3 +616,57 @@ h1 {
   .calendar-day { min-height: 56px; padding: 6px; }
   .priority { display: none; }
 }
+/* Header right group + theme button */
+.main { position: relative; }
+.topbar-right { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+@media (max-width: 760px) {
+  .topbar-right { position: absolute; top: 24px; right: 20px; }
+}
+
+/* Light theme: soft paper, not pure white */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #ecebe6;
+  --surface: #f4f3ef;
+  --surface-2: #e8e6e0;
+  --surface-hover: #e6e4de;
+  --border: #dcdad3;
+  --border-hover: #c9c6bd;
+  --text: #25252a;
+  --text-muted: #5c5c64;
+  --text-dim: #85858c;
+  --accent: #7c5cf0;
+  --accent-hover: #6a49de;
+  --accent-muted: rgba(124, 92, 240, 0.09);
+  --success: #1f9d55;
+  --warning: #b7791f;
+  --danger: #d64545;
+}
+
+:root[data-theme="light"] body::before {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.035) 1px, transparent 1px);
+}
+:root[data-theme="light"] ::selection { background: rgba(124, 92, 240, 0.25); }
+:root[data-theme="light"] ::-webkit-scrollbar-thumb:hover { background: #b5b2a8; }
+
+:root[data-theme="light"] .btn-primary {
+  --bs-btn-hover-bg: #3a3a40;
+  --bs-btn-hover-border-color: #3a3a40;
+  --bs-btn-active-bg: #3a3a40;
+  --bs-btn-active-border-color: #3a3a40;
+}
+:root[data-theme="light"] .btn-primary:hover { background: #3a3a40; border-color: #3a3a40; color: var(--bg); }
+
+:root[data-theme="light"] .icon-button:hover,
+:root[data-theme="light"] .btn-outline-secondary:hover { border-color: #b5b2a8; }
+
+:root[data-theme="light"] .task-check:checked::after {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>");
+}
+
+:root[data-theme="light"] .modal-backdrop.show { background: #1a1a1d; opacity: 0.45; }
+:root[data-theme="light"] .modal-content { box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15); }
+:root[data-theme="light"] .btn-close-white { filter: none; opacity: 0.55; }
+:root[data-theme="light"] .btn-close-white:hover { opacity: 0.9; }
