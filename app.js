@@ -1,3 +1,7 @@
+TV_STORE.get("theme", "dark") === "light"
+  ? document.documentElement.setAttribute("data-theme", "light")
+  : document.documentElement.removeAttribute("data-theme");
+
 document.addEventListener("DOMContentLoaded", () => {
   const dateEl = document.querySelector("[data-current-date]");
   if (dateEl) dateEl.textContent = new Intl.DateTimeFormat(undefined,{weekday:"short",month:"short",day:"numeric",year:"numeric"}).format(new Date());
